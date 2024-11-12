@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = "A better way to customize and build forms for your Rails application"
   spec.homepage = "https://github.com/rubymonolith/superform"
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 2.6.0"
+  # ;spec.required_ruby_version = ">= 2.6.0"
 
   spec.metadata["allowed_push_host"] = "https://rubygems.org"
 
@@ -31,6 +31,11 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "phlex-rails", "~> 1.0"
+  spec.required_ruby_version = ">= 3.3.1"
+  spec.add_dependency "phlex", ">= 2.0.0.beta2"
+  # commenting this out to handle the beta
+  # spec.add_dependency "phlex-rails", "~> 1.0"
+  
+  
   spec.add_dependency "zeitwerk", "~> 2.6"
 end
